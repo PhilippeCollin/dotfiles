@@ -3,3 +3,7 @@ if ! [ $SPIN ]; then
     alias sps="spin shell shopify"
     alias spw="spin shell web"
 fi
+
+if [ $SPIN ]; then
+    alias rnginx="sudo pkill -9 nginx && sudo service nginx start"
+fi
