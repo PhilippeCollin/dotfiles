@@ -2,6 +2,7 @@ if ! [ $SPIN ]; then
     alias spo="spin shell online-store-web"
     alias sps="spin shell shopify"
     alias spw="spin shell web"
+    alias gqldump="bin/rails graphql:schema:dump SCHEMA_NAME=admin SCHEMA_VERSIONS=unstable"
 fi
 
 if [ $SPIN ]; then
