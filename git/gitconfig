@@ -45,6 +45,7 @@
 
 [push]
     default = tracking
+    autoSetupRemote = true
 
 [log]
     date = local
