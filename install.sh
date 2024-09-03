@@ -26,3 +26,12 @@ source ~/.zshrc
 
 zplug install
 vim +PlugInstall +qall!
+
+# Cursor dotfiles
+git clone https://github.com/shopify/cursor-dotfiles ~/shopify-dotfiles/cursor-dotfiles
+
+chmod +x ~/shopify-dotfiles/cursor-dotfiles/install.sh
+~/shopify-dotfiles/cursor-dotfiles/install.sh
+
+chmod +x ~/shopify-dotfiles/cursor-dotfiles/install-extensions.sh
+~/shopify-dotfiles/cursor-dotfiles/install-extensions.sh
