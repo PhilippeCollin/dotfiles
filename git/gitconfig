@@ -42,12 +42,6 @@
     date = local
 [pull]
     rebase = true
-
-[filter "lfs"]
-    clean = git-lfs clean -- %f
-    smudge = git-lfs smudge -- %f
-    process = git-lfs filter-process
-    required = true
 [alias]
     # Add some aliases
     a = add -A
@@ -75,5 +69,11 @@
     track = push -u origin HEAD
     rollback = reset --soft HEAD^1
     la = !git config --list | grep ^alias\\. | cut -c 7- | grep -Ei --color \"$1\" "#"
+    stashfind = "!f() { git stash list | awk -F: '{print $1}' | while read stash; do git stash show -p $stash | grep -q \"$1\" && echo \"Found in $stash\"; done; }; f"
 [include]
 	path = /Users/philippe/.config/dev/gitconfig
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

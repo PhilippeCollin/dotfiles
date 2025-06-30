@@ -9,7 +9,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 if [ $SPIN ]; then
     export ZSH_THEME="cloud"
-else    
+else
     export ZSH_THEME="robbyrussell"
 fi
 
@@ -26,3 +26,8 @@ export LC_ALL=$LANG
 export PATH="$HOME/.zsh/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
+export PATH="$PATH:`yarn global bin`"
+export PATH="$HOME/.scripts/diff-so-fancy:$PATH"
+
+# Shopify CLI
+export SHOPIFY_FLAG_STORE=pcollin.myshopify.com

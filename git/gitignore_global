@@ -43,3 +43,6 @@ npm-debug.log
 *.iml
 *.sublime-project
 *.sublime-workspace
+
+# Claude
+.claude
